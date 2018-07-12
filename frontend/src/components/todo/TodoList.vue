@@ -14,7 +14,6 @@
         <img src="https://stickershop.line-scdn.net/stickershop/v1/sticker/26232145/ANDROID/sticker.png">
         <img src="https://stickershop.line-scdn.net/stickershop/v1/sticker/26232149/ANDROID/sticker.png">
         <img src="https://stickershop.line-scdn.net/stickershop/v1/sticker/26232148/ANDROID/sticker.png">
-        <img src="https://stickershop.line-scdn.net/stickershop/v1/sticker/26232146/ANDROID/sticker.png">
         <div id="header" class="header">
             <h2>Todo List App</h2>
             <input-todo />
