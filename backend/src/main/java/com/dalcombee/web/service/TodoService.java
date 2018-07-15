@@ -15,7 +15,7 @@ public class TodoService {
 	TodoRepository todoRepository;
 
 	public List<Todo> findOrderedList() {
-		return todoRepository.findAllByOrderByIsDoneAscNoDesc();
+		return todoRepository.findAllByOrderByIsDoneAscUpdatedAtDesc();
 	}
 
 	public Todo regist(String title) {
@@ -23,6 +23,7 @@ public class TodoService {
 		todo.setTitle(title);
 		todo.setDone(false);
 		todo.setCreatedAt(new Date());
+		todo.setUpdatedAt(new Date());
 		todoRepository.save(todo);
 		return todo;
 	}
@@ -38,6 +39,7 @@ public class TodoService {
 	public Todo toggle(int todoNo) {
 		Todo saved = todoRepository.findById(todoNo).get();
 		saved.setDone(!saved.isDone());
+		saved.setUpdatedAt(new Date());
 		todoRepository.save(saved);
 		return saved;
 	}

@@ -4,8 +4,8 @@ import moment from 'moment';
 export default {
     [Constant.ADD_TODO] : (state, payload) => {
         if (payload.todo !== "") {
-            //state.todolist.push({ no:payload.no, title:payload.title, done:payload.done, createdAt:moment(payload.createdAt).format(Constant.FORMAT_DISPLAY_TIME) });
-            state.todolist.unshift({ no:payload.no, title:payload.title, done:payload.done, createdAt:moment(payload.createdAt).format(Constant.FORMAT_DISPLAY_TIME) });
+            //state.todolist.push({ no:payload.no, title:payload.title, done:payload.done, updatedAt:moment(payload.updatedAt).format(Constant.FORMAT_DISPLAY_TIME) });
+            state.todolist.unshift({ no:payload.no, title:payload.title, done:payload.done, updatedAt:moment(payload.updatedAt).format(Constant.FORMAT_DISPLAY_TIME) });
         }
     },
     [Constant.DONE_TOGGLE] : (state, payload) => {
@@ -23,7 +23,7 @@ export default {
         for (const item of payload) {
           console.log("item.no:" + item.no);
           console.log("item.title:" + item.title);
-          state.todolist.push({ no:item.no, title:item.title, done:item.done, createdAt:moment(item.createdAt).format(Constant.FORMAT_DISPLAY_TIME) });
+          state.todolist.push({ no:item.no, title:item.title, done:item.done, updatedAt:moment(item.updatedAt).format(Constant.FORMAT_DISPLAY_TIME) });
         }
     }
 }

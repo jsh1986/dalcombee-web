@@ -24,4 +24,5 @@ public class Todo {
 	@Column(columnDefinition = "tinyint(1)")
 	private boolean isDone;
 	private Date createdAt;
+	private Date updatedAt;
 }

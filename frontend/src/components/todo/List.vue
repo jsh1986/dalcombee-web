@@ -40,7 +40,7 @@ ul li.checked::before {
     <transition-group name="list" tag="ul">
         <li v-for="(a, index) in todolist" v-bind:class="checked(a.done)"
             v-on:click="doneToggle({no:a.no, index:index})" :key="index">
-            <span>{{ a.title }} ({{ a.createdAt }})</span>
+            <span>{{ a.title }} ({{ a.updatedAt }})</span>
             <span v-if="a.done"> (완료)</span>
             <span class="close" v-on:click.stop="deleteTodo({no:a.no, index:index})">&#x00D7;</span>
         </li>

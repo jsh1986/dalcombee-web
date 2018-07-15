@@ -8,6 +8,9 @@
 
 export default {
   name: 'app',
+  created() {
+    document.title = 'Dalcombee'
+  },
   data () {
     return {
       msg: 'Welcome to Dalcombee'
