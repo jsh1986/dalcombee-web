@@ -18,6 +18,9 @@ export default {
     },
     [Constant.DELETE_TODO] : (store, payload) => {
         console.log("###[action] deleteTodo!!!");
+        if (false == confirm("삭제하시겠습니까?")) {
+          return;
+        }
 
         AXIOS.delete(`/todo/` + payload.no)
         .then(response => {

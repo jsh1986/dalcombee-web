@@ -4,7 +4,8 @@ import moment from 'moment';
 export default {
     [Constant.ADD_TODO] : (state, payload) => {
         if (payload.todo !== "") {
-            state.todolist.push({ no:payload.no, title:payload.title, done:payload.done, createdAt:moment(payload.createdAt).format(Constant.FORMAT_DISPLAY_TIME) });
+            //state.todolist.push({ no:payload.no, title:payload.title, done:payload.done, createdAt:moment(payload.createdAt).format(Constant.FORMAT_DISPLAY_TIME) });
+            state.todolist.unshift({ no:payload.no, title:payload.title, done:payload.done, createdAt:moment(payload.createdAt).format(Constant.FORMAT_DISPLAY_TIME) });
         }
     },
     [Constant.DONE_TOGGLE] : (state, payload) => {

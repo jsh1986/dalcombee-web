@@ -17,7 +17,7 @@ public class TodoRepositoryTest extends DalcombeeWebApplicationTest {
 
 	@Test
 	public void testfindAllOrderByIsDone() {
-		List<Todo> list = todoRepository.findAllByOrderByIsDoneDescNoDesc();
+		List<Todo> list = todoRepository.findAllByOrderByIsDoneAscNoDesc();
 		System.out.println("###list:" + list);
 	}
 

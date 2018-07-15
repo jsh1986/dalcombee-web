@@ -24,7 +24,7 @@ public class TodoController {
 	
 	@GetMapping("/all")
 	public List<Todo> all() {
-		return todoService.findAllByOrderByIsDoneDescNoDesc();
+		return todoService.findOrderedList();
 	}
 
 	@PostMapping
