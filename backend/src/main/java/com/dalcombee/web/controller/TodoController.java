@@ -24,8 +24,7 @@ public class TodoController {
 	
 	@GetMapping("/all")
 	public List<Todo> all() {
-		log.info("called API. /all");
-		return todoService.getAll();
+		return todoService.findAllByOrderByIsDoneDescNoDesc();
 	}
 
 	@PostMapping

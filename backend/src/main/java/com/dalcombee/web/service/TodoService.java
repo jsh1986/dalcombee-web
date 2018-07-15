@@ -14,8 +14,8 @@ public class TodoService {
 	@Autowired
 	TodoRepository todoRepository;
 
-	public List<Todo> getAll() {
-		return todoRepository.findAll();
+	public List<Todo> findAllByOrderByIsDoneDescNoDesc() {
+		return todoRepository.findAllByOrderByIsDoneDescNoDesc();
 	}
 
 	public Todo regist(String title) {
