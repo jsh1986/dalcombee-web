@@ -10,23 +10,23 @@
     img {width:100px;}
 </style>
 <template>
-    <div id="todolistapp">
+    <div id="cashlistapp">
         <img src="https://stickershop.line-scdn.net/stickershop/v1/sticker/26232145/ANDROID/sticker.png">
         <img src="https://stickershop.line-scdn.net/stickershop/v1/sticker/26232149/ANDROID/sticker.png">
         <img src="https://stickershop.line-scdn.net/stickershop/v1/sticker/26232148/ANDROID/sticker.png">
         <div id="header" class="header">
-            <h2>Todo List</h2>
-            <input-todo />
+            <h2>Cash Receipt List</h2>
+            <input-cash />
         </div>
         <list></list>
     </div>
 </template>
 <script type="text/javascript">
-import InputTodo from './InputTodo.vue';
+import InputCash from './InputCash.vue';
 import List from './List.vue';
 
 export default {
-    name : 'todo-list',
-    components : { InputTodo, List }
+    name : 'cash-list',
+    components : { InputCash, List }
 }
 </script>

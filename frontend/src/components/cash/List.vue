@@ -38,11 +38,11 @@ ul li.checked::before {
 </style>
 <template>
     <transition-group name="list" tag="ul">
-        <li v-for="(a, index) in todolist" v-bind:class="checked(a.done)"
+        <li v-for="(a, index) in cashlist" v-bind:class="checked(a.done)"
             v-on:click="doneToggle({no:a.no, index:index})" :key="index">
             <span>{{ a.title }} ({{ a.updatedAt }})</span>
             <span v-if="a.done"> (완료)</span>
-            <span class="close" v-on:click.stop="deleteTodo({no:a.no, index:index})">&#x00D7;</span>
+            <span class="close" v-on:click.stop="deleteCash({no:a.no, index:index})">&#x00D7;</span>
         </li>
     </transition-group>
 </template>
@@ -53,9 +53,9 @@ import _ from 'lodash';
 
 export default {
     created() {
-      this.$store.dispatch(Constant.LOAD_LIST_TODO, {});
+      this.$store.dispatch(Constant.LOAD_LIST_CASH, {});
     },
-    computed : mapState([ 'todolist']),
+    computed : mapState([ 'cashlist']),
     methods : _.extend({
             checked : function(done) {
                 if(done) return { checked:true };
@@ -63,7 +63,7 @@ export default {
             }
         },
         mapActions([
-            Constant.DELETE_TODO, Constant.DONE_TOGGLE
+            Constant.DELETE_CASH
         ])
     )
 }

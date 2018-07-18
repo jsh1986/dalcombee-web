@@ -6,6 +6,7 @@ import Service from '@/components/Service'
 import Bootstrap from '@/components/Bootstrap'
 import User from '@/components/User'
 import TodoList from '@/components/todo/TodoList'
+import CashList from '@/components/cash/CashList'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/todo',
       name: 'TodoList',
       component: TodoList
+    },
+    {
+      path: '/cash',
+      name: 'CashList',
+      component: CashList
     }
   ]
 })

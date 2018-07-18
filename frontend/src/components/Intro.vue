@@ -12,6 +12,7 @@
     <br />
     <br />
     <h5>'Todo List' page : <router-link :to="{ name: 'TodoList' }" exact target="_blank">/todo</router-link></h5>
+    <h5>'Cash List' page : <router-link :to="{ name: 'CashList' }" exact target="_blank">/cash</router-link></h5>
     <br />
     <h5>You can see <a href="https://store.line.me/stickershop/product/1840992/en" target="_blank">LINE Sticker!!</a></h5>
   </div>
