@@ -1,6 +1,7 @@
 <style>
 * {  box-sizing: border-box;  }
 .input {
+    background-color: white;
     border: none; width: 75%; height:35px; padding: 10px;
     float: left; font-size: 16px;
 }

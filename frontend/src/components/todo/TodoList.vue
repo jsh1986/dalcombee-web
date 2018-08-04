@@ -1,8 +1,9 @@
 <style>
     * {  box-sizing: border-box;  }
     .header {
-        background-color: purple; padding: 30px 30px;
-        color: yellow; text-align: center;
+        background-color: black;
+        padding: 30px 30px;
+        color: blue; text-align: center;
     }
     .header:after {
         content: ""; display: table; clear: both;

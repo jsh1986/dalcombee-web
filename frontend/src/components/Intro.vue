@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <img src="https://stickershop.line-scdn.net/stickershop/v1/product/1840992/LINEStorePC/main@2x.png">
-    <h1>{{ hellomsg }}</h1>
+    <h1>Helo</h1>
     <br />
     <!--
     <ul>
@@ -20,8 +20,7 @@
 
 <script>
 export default {
-  name: 'hello',
-  props: { hellomsg: { type: String, required: true } }
+  name: 'hello'
 }
 
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <img src="./../assets/spring-boot-vuejs-logo.png">
-    <h1>{{ hellomsg }}</h1>
+    <h1>Welcome</h1>
     <h2>See the sources here: </h2>
     <ul>
       <li><a href="https://github.com/jonashackt/spring-boot-vuejs" target="_blank">github.com/jonashackt/spring-boot-vuejs</a></li>
@@ -20,8 +20,7 @@
 
 <script>
 export default {
-  name: 'hello',
-  props: { hellomsg: { type: String, required: true } }
+  name: 'hello'
 }
 
 </script>
