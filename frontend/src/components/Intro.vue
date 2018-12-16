@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
-    <img src="https://stickershop.line-scdn.net/stickershop/v1/product/1840992/LINEStorePC/main@2x.png">
-    <h1>Helo</h1>
+    <h1>Hello!</h1>
     <br />
     <!--
     <ul>
