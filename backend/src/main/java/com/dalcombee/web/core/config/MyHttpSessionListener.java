@@ -13,22 +13,17 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class MyHttpSessionListener implements HttpSessionListener {
 	
-//	private final int MAX_SESSION_SECONDS = 30 * 24 * 60 * 60; // 30일
-	private final int MAX_SESSION_SECONDS = 3;
+	private final int MAX_SESSION_SECONDS = 30 * 24 * 60 * 60; // 30일. 브라우저를 끄지 않으면, 이 시간 이후에 로그아웃 처리됨.
 	
 	@Override
 	public void sessionCreated(HttpSessionEvent event) {
 		event.getSession().setMaxInactiveInterval(MAX_SESSION_SECONDS); // in seconds
 		log.info("sessionCreated. Session ID: {}", event.getSession().getId());
-		System.out.println("sessionCreated. Session ID: {}" + event.getSession().getId());
 	}
 
 	@Override
 	public void sessionDestroyed(HttpSessionEvent event) {
-		// TODO Auto-generated method stub
-		
 		log.info("sessionDestroyed. Session ID: {}", event.getSession().getId());
-		System.out.println("sessionDestroyed. Session ID: {}" + event.getSession().getId());
 	}
 
 }
